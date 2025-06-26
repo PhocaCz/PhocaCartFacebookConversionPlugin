@@ -54,7 +54,7 @@ Phoca Cart - Facebook (Meta Pixel) Conversion Tracking Plugin - plugin that inse
 
 ## Version (Joomla! 5.x)
 
-5.1.0Beta
+5.1.4Beta
 
 
 
