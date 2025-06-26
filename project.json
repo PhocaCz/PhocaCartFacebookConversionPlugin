@@ -1,0 +1,20 @@
+{
+	"author": "Jan Pavelka (www.phoca.cz)",
+	"authorUrl": "https://www.phoca.cz",
+	"copyright": "Jan Pavelka",
+	"license": "GNU/GPL",
+	"projectName": "PhocaCartFacebookConversionPlugin",
+	"extensionName": "Phoca Cart - Facebook (Meta Pixel) Conversion Plugin",
+	"projectInitials" : "PC",				  
+	"description": "Phoca Cart - Facebook (Meta Pixel) Conversion Tracking Plugin - plugin that inserts Facebook conversion tracking code into the website.",
+	"projectUrl": "https://www.phoca.cz/phocacart-extensions/2-plugins/135-phoca-cart-facebook-meta-pixel-conversion-plugin",
+	"projectDocumentationUrl": "https://www.phoca.cz/documentation/category/115-phoca-cart",
+	"projectMainComponent": "Phoca Cart",
+	"projectMainComponentInfoUrl": "https://www.phoca.cz/project/phocacart-joomla-ecommerce",
+	"projectDemo" : {
+		"Joomla! - Phoca Cart Demo": "https://www.phoca.cz/phocacart5demo/"
+	},
+	"projectColor": "#129ed9",
+	"projectBranch": "main",
+	"nameSpace": "Joomla\\Plugin\\System\\PhocaCartFacebookConversion"
+}

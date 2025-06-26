@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<updates>
+	<update>
+		<name><![CDATA[ Phoca Cart - Facebook (Meta Pixel) Conversion Plugin ]]></name>
+		<description><![CDATA[ Phoca Cart - Facebook (Meta Pixel) Conversion Tracking Plugin - plugin that inserts Facebook conversion tracking code into the website. ]]></description>
+		<element>phocacart_facebook_conversion</element>
+		<folder>system</folder>
+		<type>plugin</type>
+		<version>5.1.0</version>
+		<infourl title="Phoca Cart - Facebook (Meta Pixel) Conversion Plugin 5.1.0">https://www.phoca.cz/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartFacebookConversionPlugin/releases/download/5.1.0/plg_system_phocacart_facebook_conversion_v5.1.0.zip</downloadurl>
+		</downloads>
+		<sha512>67412fffa26fd2764754497c5e93c56746b692135d7c399111dc885691ebe8944a30206461cfde8d31beb525d2974ee1943504d7c265cf767e2781d1bfa0dc5d</sha512>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
+		<maintainerurl>https://www.phoca.cz/</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="5\.*"/>
+		<client>site</client>
+	</update>
+</updates>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade" version="5.0">
+	<name>plg_system_phocacart_facebook_conversion</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>26/06/2025</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>5.1.0</version>
+	<description>PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\System\PhocaCartFacebookConversion</namespace>
+	<projectName>PhocaCartFacebookConversionPlugin</projectName>
+
+	<files>
+		<folder>helpers</folder>
+		<folder>src</folder>
+		<folder plugin="phocacart_facebook_conversion">services</folder>
+		<filename plugin="phocacart_facebook_conversion">index.html</filename>
+		<filename plugin="phocacart_facebook_conversion">manifest.xml</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_phocacart_facebook_conversion.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_phocacart_facebook_conversion.sys.ini</language>
+	</languages>
+
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_system_phocacart_facebook_conversion.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_system_phocacart_facebook_conversion.sys.ini</language>
+		</languages>
+	</administration>
+	<form>
+		<config>
+			<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
+			<fieldset name="basic" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_BASIC_OPTIONS" group="pcv">
+
+				<field name="pixel_id" type="text" default="" required="true" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_META_PIXEL_ID_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_META_PIXEL_ID_DESCRIPTION"/>
+
+				<field name="total_netto_brutto" type="radio" layout="joomla.form.field.radio.switcher" default="2" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TOTAL_NETTO_BRUTTO_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TOTAL_NETTO_BRUTTO_DESCRIPTION">
+					<option value="1">Netto</option>
+					<option value="2">Brutto</option>
+				</field>
+
+				<field name="id_sku" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_ID_SKU_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_ID_SKU_DESCRIPTION">
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_ID</option>
+					<option value="2">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_SKU</option>
+				</field>
+
+				 <field name="track_add_to_cart" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_ADD_TO_CART_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_ADD_TO_CART_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+				<field name="track_initiate_checkout" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_INITIATE_CHECKOUT_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_INITIATE_CHECKOUT_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+				<field name="initialize_checkout_rule" type="list" layout="" default="3" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_INITIALIZE_CHECKOUT_RULE_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_INITIALIZE_CHECKOUT_RULE_DESCRIPTION">
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_ALWAYS</option>
+					<option value="2">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_SESSION</option>
+					<option value="3">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_QUANTITY_CHANGES</option>
+				</field>
+
+				<field name="track_view_content" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_VIEW_CONTENT_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_VIEW_CONTENT_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+				<field name="track_search" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_SEARCH_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_SEARCH_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+				<field name="track_add_payment_info" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_ADD_PAYMENT_INFO_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_ADD_PAYMENT_INFO_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+				<field name="track_purchase" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_PURCHASE_LABEL" description="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_TRACK_PURCHASE_DESCRIPTION">
+					<option value="0">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_NO</option>
+					<option value="1">PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION_YES</option>
+				</field>
+
+			</fieldset>
+			</fields>
+		</config>
+
+</form>
+	
+
+	<updateservers>
+		<server type="extension" name="PLG_SYSTEM_PHOCACART_FACEBOOK_CONVERSION" priority="1"><![CDATA[https://raw.githubusercontent.com/PhocaCz/PhocaCartFacebookConversionPlugin/main/manifest.xml]]></server>
+	</updateservers>
+</extension>
